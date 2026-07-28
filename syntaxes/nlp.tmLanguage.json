@@ -22,14 +22,14 @@
             "match": "\\b(?i:(cap|cout|else|gp|group|if|inc|return|while))\\b"
         },
         {
-            "name": "keyword.operator.word.nlp",
-            "match": "\\b(?i:(and|not|or|in))\\b"
+            "include": "#operators"
         },
         {
-            "name": "keyword.operator.nlp",
-            "match": "(\\+\\+|--|==|!=|<=|>=|<>|&&|\\|\\||[-+*/%=<>])"
-        },
-        {
+            "include": "#function-call"
+        }
+    ],
+    "repository": {
+        "function-call": {
             "match": "([\\w_]+)\\s*\\(",
             "captures": {
                 "1": {
@@ -43,9 +43,19 @@
                     ]
                 }
             }
-        }
-    ],
-    "repository": {
+        },
+        "operators": {
+            "patterns": [
+                {
+                    "name": "keyword.operator.word.nlp",
+                    "match": "\\b(?i:(and|not|or|in))\\b"
+                },
+                {
+                    "name": "keyword.operator.nlp",
+                    "match": "(<<|>>|\\+\\+|--|==|!=|<=|>=|<>|&&|\\|\\||[-+*/%=<>!])"
+                }
+            ]
+        },
         "functions-node": {
             "name": "entity.name.function.letter.nlp",
             "match": "\\b(G|N|S|X|L)\\b"
@@ -130,6 +140,9 @@
                     "include": "#attribute-equals"
                 },
                 {
+                    "include": "#escaped-char"
+                },
+                {
                     "include": "#constant-nodes"
                 },
                 {
@@ -140,6 +153,15 @@
                 },
                 {
                     "include": "#comment-line"
+                },
+                {
+                    "include": "#string"
+                },
+                {
+                    "include": "#literal"
+                },
+                {
+                    "include": "#operators"
                 }
             ],
             "name": "meta.rules.rule.attribute.nlp"
@@ -282,6 +304,12 @@
             "patterns": [
                 {
                     "include": "#expression"
+                },
+                {
+                    "include": "#function-call"
+                },
+                {
+                    "include": "#operators"
                 }
             ]
         }
