@@ -1,0 +1,30 @@
+{
+  "name": "nlpplus-tmbundle",
+  "version": "1.0.0",
+  "description": "TextMate grammars for NLP++ and the VisualText file formats (.nlp, .pat, .dict, .kb, .kbb, .tree, .txxt)",
+  "license": "MIT",
+  "author": "David de Hilster",
+  "homepage": "https://visualtext.org",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VisualText/nlpplus-tmbundle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VisualText/nlpplus-tmbundle/issues"
+  },
+  "keywords": [
+    "nlp++",
+    "nlp",
+    "visualtext",
+    "textmate",
+    "grammar",
+    "syntax-highlighting",
+    "tmlanguage"
+  ],
+  "files": [
+    "syntaxes",
+    "language-configuration",
+    "LICENSE",
+    "README.md"
+  ]
+}
