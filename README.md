@@ -27,6 +27,14 @@ output formats rather than the language itself.
 Matching VS Code language configurations (brackets, comments, auto-closing pairs) are in
 [`language-configuration/`](language-configuration/).
 
+## Comments
+
+`#` runs to end of line. C-style `/* ... */` block comments are supported by the NLP++
+engine as of version 3.7.14, in the pass language (`.nlp`, `.pat`) and in the four
+line-oriented data formats (`.seq`, `.kb`, `.dict`, `.kbb`). They do not nest — the first
+`*/` closes — and delimiters inside a string or a `#` comment are ordinary text. `.tree`
+files are engine output and use `*` line comments only.
+
 ## Samples
 
 [`samples/`](samples/) contains real-world NLP++ from the
