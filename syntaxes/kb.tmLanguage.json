@@ -29,6 +29,9 @@
                     "include": "#comment-line"
                 },
                 {
+                    "include": "#comment-block"
+                },
+                {
                     "include": "#number"
                 },
                 {
@@ -64,6 +67,21 @@
         "comment-line": {
             "match": "\\s*#.*$\\n?",
             "name": "comment.line.dict"
+        },
+        "comment-block": {
+            "begin": "/\\*",
+            "beginCaptures": {
+                "0": {
+                    "name": "comment.block.begin.kb"
+                }
+            },
+            "end": "\\*/",
+            "endCaptures": {
+                "0": {
+                    "name": "comment.block.end.kb"
+                }
+            },
+            "name": "comment.block.kb"
         }
     }
 }

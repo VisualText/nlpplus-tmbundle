@@ -15,7 +15,10 @@
             "patterns": [
                 {
                     "include": "#comment-line"
-                },    
+                },
+                {
+                    "include": "#comment-block"
+                },
                 {
                     "include": "#attribute-equals"
                 },
@@ -74,6 +77,21 @@
         "comment-line": {
             "match": "\\s*#.*$\\n?",
             "name": "comment.line.dict"
+        },
+        "comment-block": {
+            "begin": "/\\*",
+            "beginCaptures": {
+                "0": {
+                    "name": "comment.block.begin.dict"
+                }
+            },
+            "end": "\\*/",
+            "endCaptures": {
+                "0": {
+                    "name": "comment.block.end.dict"
+                }
+            },
+            "name": "comment.block.dict"
         },
         "qstring-double": {
             "begin": "\"",

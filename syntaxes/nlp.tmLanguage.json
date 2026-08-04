@@ -118,7 +118,7 @@
                     "include": "#escaped-char"
                 },
                 {
-                    "include": "#comment-line"
+                    "include": "#comment"
                 }
             ]
         },
@@ -152,7 +152,7 @@
                     "include": "#attribute"
                 },
                 {
-                    "include": "#comment-line"
+                    "include": "#comment"
                 },
                 {
                     "include": "#string"
