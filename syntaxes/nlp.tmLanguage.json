@@ -168,7 +168,7 @@
         },
         "constant-nodes": {
             "name": "keyword.constants.nlp",
-            "match": "\\b_(xWILD|xNUM|xALPHA|xWHITE|xNIL|xSTART|xEND|xCTRL)\\b"
+            "match": "\\b_(xALPHA|xANY|xBLANK|xCAPLET|xCAP|xCTRL|xEMOJI|xEND|xEOF|xLET|xNIL|xNUM|xPUNCT|xSTART|xVAR|xWHITE|xWILD)\\b"
         },
         "attribute-equals": {
             "begin": "([_\\w]+)\\s*(=)\\s*(\\()",
@@ -190,7 +190,7 @@
             "end": "\\)",
             "endCaptures": {
                 "0": {
-                    "name": "punctuation.paren.open"
+                    "name": "punctuation.paren.close"
                 }
             },
             "patterns": [
@@ -210,7 +210,7 @@
         },
         "attribute": {
             "name": "keyword.attribute.nlp",
-            "match": "\\b(?i:(attr|attrs|da|deacc|deaccent|except|excepts|fail|fails|gp|group|layer|layers|look|lookahead|match|matches|max|min|nest|o|one|opt|option|optional|pass|passes|plus|recurse|ren|rename|s|singlet|star|t|tree|trig|trigger|unsealed))\\b"
+            "match": "\\b(?i:(attr|attrs|base|da|deacc|deaccent|except|excepts|fail|fails|gp|group|layer|layers|look|lookahead|match|matches|max|min|nest|o|one|opt|option|optional|pass|passes|plus|recurse|ren|rename|s|singlet|star|t|tree|trig|trigger|unsealed))\\b"
         },
         "escaped-char": {
             "name": "constant.character.escape",
