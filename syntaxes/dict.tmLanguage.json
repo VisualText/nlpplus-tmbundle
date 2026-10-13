@@ -40,16 +40,16 @@
             "match": "^([^=]+)(\\s)([\\w\\d]+)(\\s)*(=)",
             "captures": {
                 "1": {
-                    "name": "comment.line.dict"
+                    "name": "entity.name.tag.dict"
                 },
                 "2": {
-                    "name": "entity.nothing.dict"
+                    "name": "meta.whitespace.dict"
                 },
                 "3": {
-                    "name": "keyword.region.dict"
+                    "name": "support.type.property-name.dict"
                 },
                 "4": {
-                    "name": "keyword.region.dict"
+                    "name": "meta.whitespace.dict"
                 },
                 "5": {
                     "name": "keyword.operator.dict"
@@ -58,16 +58,16 @@
         },
         "value": {
             "match": "[\\w\\d]+",
-            "name": "entity.name.function.dict"
+            "name": "string.unquoted.value.dict"
         },
         "other-attrs": {
             "match": "([\\w]+)(\\s)*(=)",
             "captures": {
                 "1": {
-                    "name": "keyword.region.dict"
+                    "name": "support.type.property-name.dict"
                 },
                 "2": {
-                    "name": "keyword.region.dict"
+                    "name": "meta.whitespace.dict"
                 },
                 "3": {
                     "name": "keyword.operator.dict"
@@ -96,7 +96,7 @@
         "qstring-double": {
             "begin": "\"",
             "end": "\\\"|(?:[^\\\\\\n]$)",
-            "name": "string.double.dict",
+            "name": "string.quoted.double.dict",
             "patterns": [
                 {
                     "include": "#string-character-escape"

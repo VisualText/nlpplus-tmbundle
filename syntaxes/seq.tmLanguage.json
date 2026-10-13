@@ -69,7 +69,7 @@
         "qstring-double": {
             "begin": "\"",
             "end": "\\\"|(?:[^\\\\\\n]$)",
-            "name": "string.double.seq",
+            "name": "string.quoted.double.seq",
             "patterns": [
                 {
                     "include": "#string-character-escape"
@@ -81,7 +81,7 @@
             "name": "constant.character.escape.seq"
         },
         "literal": {
-            "name": "literal.seq",
+            "name": "meta.literal.seq",
             "patterns": [
                 {
                     "include": "#numeric-literal"

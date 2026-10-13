@@ -11,7 +11,7 @@
     ],
     "repository": {
         "expression": {
-            "name": "meta.expression.tree",
+            "name": "meta.expression.txxt",
             "patterns": [
                 {
                     "include": "#angle-match"

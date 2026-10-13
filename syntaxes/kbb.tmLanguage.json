@@ -44,22 +44,22 @@
         },
         "top-concept": {
             "match": "^([\\w\\d]+)$",
-            "name": "keyword.other.kbb"
+            "name": "entity.name.type.level0.kbb"
         },
         "concept-name": {
-            "name": "keyword.concept.kbb",
+            "name": "entity.name.type.level1.kbb",
             "match": "^[\\s][\\s][\\w\\d][^:^\\[]+[:]?"
         },
         "concept-name1": {
-            "name": "keyword.concept.kbb1",
+            "name": "entity.name.type.level2.kbb",
             "match": "^[\\s][\\s][\\s][\\s][\\w\\d][^:^\\[]+[:]?"
         },
         "concept-name2": {
-            "name": "keyword.concept.kbb2",
+            "name": "entity.name.type.level3.kbb",
             "match": "^[\\s][\\s][\\s][\\s][\\s][\\s][\\w\\d][^:^\\[]+[:]?"
         },
         "attribute-name": {
-            "name": "constant.numeric.tree",
+            "name": "constant.numeric.kbb",
             "match": "\\b[\\w\\d]+="
         },
         "attributes": {
@@ -78,7 +78,7 @@
         "qstring-double": {
             "begin": "\"",
             "end": "\\\"|(?:[^\\\\\\n]$)",
-            "name": "string.double.kbb",
+            "name": "string.quoted.double.kbb",
             "patterns": [
                 {
                     "include": "#string-character-escape"
@@ -95,7 +95,7 @@
         },
         "comment-line": {
             "match": "\\s*#.*$\\n?",
-            "name": "comment.line.dict"
+            "name": "comment.line.kbb"
         },
         "comment-block": {
             "begin": "/\\*",
