@@ -30,10 +30,10 @@
         },
         "node-name": {
             "match": "^([\\s]+)([^_\\s]+)",
-            "name": "keyword.node.tree"
+            "name": "string.unquoted.token.tree"
         },
         "rewrites": {
-            "name": "keyword.rewrite.tree",
+            "name": "entity.name.type.tree",
             "match": "\\b_[\\w]+\\b"
         },
         "attributes": {
@@ -55,7 +55,7 @@
         "qstring-double": {
             "begin": "\"",
             "end": "\\\"|(?:[^\\\\\\n]$)",
-            "name": "string.double.tree",
+            "name": "string.quoted.double.tree",
             "patterns": [
                 {
                     "include": "#string-character-escape"
@@ -67,7 +67,7 @@
             "name": "constant.character.escape.tree"
         },
         "literal": {
-            "name": "literal.tree",
+            "name": "meta.literal.tree",
             "patterns": [
                 {
                     "include": "#numeric-literal"
@@ -86,15 +86,15 @@
         },
         "fired": {
             "match": "\\b(?i:(fired))\\b",
-            "name": "keyword.fired.tree"
+            "name": "keyword.other.fired.tree"
         },
         "types": {
             "match": "\\b(?i:(alpha|ctrl|emoji|node|num|punct|white))\\b",
-            "name": "keyword.attribute.tree"
+            "name": "storage.type.tree"
         },
         "comment-line": {
             "match": "\\s*#.*$\\n?",
-            "name": "comment.line.dict"
+            "name": "comment.line.tree"
         }
     }
 }

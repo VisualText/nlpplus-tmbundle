@@ -27,6 +27,34 @@ output formats rather than the language itself.
 Matching VS Code language configurations (brackets, comments, auto-closing pairs) are in
 [`language-configuration/`](language-configuration/).
 
+## Scope names
+
+Every scope follows the [TextMate naming conventions](https://macromates.com/manual/en/language_grammars#naming_conventions)
+(`keyword.control`, `constant.language`, `entity.other.attribute-name`, `string.quoted.double`, ...)
+and ends in the language's own suffix (`.nlp`, `.tree`, ...), so any theme colors NLP++ without
+custom rules. Older versions used invented names that only colored correctly with the VS Code
+extension's own color settings. If you have color customizations keyed to those names, rename them:
+
+| Old | New |
+|---|---|
+| `keyword.region.nlp` (`@RULES`, `@CODE`, ...) | `keyword.control.directive.region.nlp` |
+| `keyword.constants.nlp` (`_xWILD`, `_ROOT`, ...) | `constant.language.nlp` |
+| `keyword.attribute.nlp` (`match`, `opt`, `trig`, ...) | `entity.other.attribute-name.nlp` |
+| `keyword.equals.nlp` | `keyword.operator.assignment.nlp` |
+| `variable.rewrite.nlp` (the suggested concept) | `entity.name.type.rewrite.nlp` |
+| `variable.rewrite-symbol.nlp` | `meta.attribute.rewrite.nlp` |
+| `literal.nlp`, `literal.seq`, `literal.tree` | `meta.literal.*` |
+| `string.double.*` | `string.quoted.double.*` |
+| `constant.character.escape`, `punctuation.paren.*`, `punctuation.square.*` (`.nlp`) | same, with `.nlp` |
+| `keyword.rewrite.tree` (`_NP`, ...) | `entity.name.type.tree` |
+| `keyword.node.tree` (token text) | `string.unquoted.token.tree` |
+| `keyword.attribute.tree` (`alpha`, `num`, ...) | `storage.type.tree` |
+| `keyword.fired.tree` | `keyword.other.fired.tree` |
+| `keyword.other.kbb`, `keyword.concept.kbb`, `keyword.concept.kbb1`, `keyword.concept.kbb2` | `entity.name.type.level0.kbb` ... `level3.kbb` |
+| `comment.line.dict` (headword), `keyword.region.dict` (key), `entity.name.function.dict` (value) | `entity.name.tag.dict`, `support.type.property-name.dict`, `string.unquoted.value.dict` |
+| `comment.line.dict` in `.kb`, `.kbb`, `.tree`; `constant.numeric.tree` in `.kbb`; `meta.expression.tree` in `.txxt` | the file's own suffix |
+| `variable.parameter.nlp` in `.kb` (`add`, `bind`, ...) | `keyword.control.kb` |
+
 ## Comments
 
 `#` runs to end of line. C-style `/* ... */` block comments are supported by the NLP++

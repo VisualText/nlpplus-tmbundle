@@ -10,11 +10,11 @@
             "include": "#expression"
         },
         {
-            "name": "keyword.region.nlp",
+            "name": "keyword.control.directive.region.nlp",
             "match": "(@(@)?)(CHECK|CODE|DECL|MULTI|NODES|PATH|POST|PRE|RULES)\\b"
         },
         {
-            "name": "keyword.constants.nlp",
+            "name": "constant.language.nlp",
             "match": "\\b_ROOT\\b"
         },
         {
@@ -85,7 +85,7 @@
             "begin": "([_\\w]+)\\s*((\\[[^\\]]*\\]))*\\s*(<-)",
             "beginCaptures": {
                 "1": {
-                    "name": "variable.rewrite.nlp"
+                    "name": "entity.name.type.rewrite.nlp"
                 },
                 "2": {
                     "patterns": [
@@ -95,13 +95,13 @@
                     ]
                 },
                 "3": {
-                    "name": "variable.rewrite-symbol.nlp"
+                    "name": "meta.attribute.rewrite.nlp"
                 }
             },
             "end": "@@",
             "endCaptures": {
                 "0": {
-                    "name": "keyword.region.nlp"
+                    "name": "keyword.control.directive.region.nlp"
                 }
             },
             "patterns": [
@@ -126,13 +126,13 @@
             "begin": "\\[",
             "beginCaptures": {
                 "0": {
-                    "name": "punctuation.square.open"
+                    "name": "punctuation.square.open.nlp"
                 }
             },
             "end": "\\]",
             "endCaptures": {
                 "0": {
-                    "name": "punctuation.square.close"
+                    "name": "punctuation.square.close.nlp"
                 }
             },
             "patterns": [
@@ -167,7 +167,7 @@
             "name": "meta.rules.rule.attribute.nlp"
         },
         "constant-nodes": {
-            "name": "keyword.constants.nlp",
+            "name": "constant.language.nlp",
             "match": "\\b_(xALPHA|xANY|xBLANK|xCAPLET|xCAP|xCTRL|xEMOJI|xEND|xEOF|xLET|xNIL|xNUM|xPUNCT|xSTART|xVAR|xWHITE|xWILD)\\b"
         },
         "attribute-equals": {
@@ -181,16 +181,16 @@
                     ]
                 },
                 "2": {
-                    "name": "keyword.equals.nlp"
+                    "name": "keyword.operator.assignment.nlp"
                 },
                 "3": {
-                    "name": "punctuation.paren.open"
+                    "name": "punctuation.paren.open.nlp"
                 }
             },
             "end": "\\)",
             "endCaptures": {
                 "0": {
-                    "name": "punctuation.paren.close"
+                    "name": "punctuation.paren.close.nlp"
                 }
             },
             "patterns": [
@@ -209,11 +209,11 @@
             ]
         },
         "attribute": {
-            "name": "keyword.attribute.nlp",
+            "name": "entity.other.attribute-name.nlp",
             "match": "\\b(?i:(attr|attrs|base|da|deacc|deaccent|except|excepts|fail|fails|gp|group|layer|layers|look|lookahead|match|matches|max|min|nest|o|one|opt|option|optional|pass|passes|plus|recurse|ren|rename|s|singlet|star|t|tree|trig|trigger|unsealed))\\b"
         },
         "escaped-char": {
-            "name": "constant.character.escape",
+            "name": "constant.character.escape.nlp",
             "match": "\\\\."
         },
         "token": {
@@ -261,7 +261,7 @@
         "qstring-double": {
             "begin": "\"",
             "end": "\\\"|(?:[^\\\\\\n]$)",
-            "name": "string.double.nlp",
+            "name": "string.quoted.double.nlp",
             "patterns": [
                 {
                     "include": "#string-character-escape"
@@ -273,7 +273,7 @@
             "name": "constant.character.escape.nlp"
         },
         "literal": {
-            "name": "literal.nlp",
+            "name": "meta.literal.nlp",
             "patterns": [
                 {
                     "include": "#numeric-literal"
