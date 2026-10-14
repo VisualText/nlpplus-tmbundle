@@ -11,7 +11,7 @@
         },
         {
             "name": "keyword.control.directive.region.nlp",
-            "match": "(@(@)?)(CHECK|CODE|DECL|MULTI|NODES|PATH|POST|PRE|RULES)\\b"
+            "match": "(@(@)?)(CHECK|CODE|DECL|MULTI|NODES|PATH|POSTCODE|POST|PRE|RULES)\\b"
         },
         {
             "name": "constant.language.nlp",
